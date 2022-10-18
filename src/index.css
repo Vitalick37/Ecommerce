@@ -10,10 +10,22 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
+header {
+    position: relative;
+}
 ul {
     list-style: none;
 }
 .wrapper {
     width: 1280px;
     margin: 50px auto;
+}
+.cart {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cart:hover,
+.cart.active {
+    color: #dc3d3d;
+    transform: scale(1.2);
 }
