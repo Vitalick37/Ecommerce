@@ -1,4 +1,5 @@
 import styles from "./Order.module.css";
+import { FaTrashRestoreAlt } from 'react-icons/fa';
 
 const Order = (props) => {
     return (
@@ -6,6 +7,7 @@ const Order = (props) => {
         <img src={"./img/" + props.item.img} alt="furniture" />
         <h2>{props.item.title}</h2>
         <p>{props.item.price}$</p>
+        <FaTrashRestoreAlt className={styles.delete} onClick={() => props.onDelete(props.item.id)}/>
     </div>
     );
 };

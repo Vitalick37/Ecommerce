@@ -4,11 +4,14 @@ import { useState } from 'react';
 import Order from '@components/Order';
 
 const showOrders = (props) => {
+    let sum = 0;
+    props.orders.forEach(el => sum += Number.parseFloat(el.price))
     return (
         <>
         {props.orders.map(el => (
-            <Order key={el.id} item={el}/>
+            <Order key={el.id} item={el} onDelete={props.onDelete}/>
             ))}
+        <p className={styles.sum}>Итого: {new Intl.NumberFormat().format(sum)}$</p>
         </>
     )
 }

@@ -19,4 +19,14 @@
 .item p {
     font-weight: 600;
     color: #797979;
+    margin-right: 20px;
+}
+.delete {
+    cursor: pointer;
+    color: #ca5252;
+    transition: all 0.3s ease 0s;
+}
+.delete:hover {
+    color: #d83030;
+    transform: scale(1.2);
 }
