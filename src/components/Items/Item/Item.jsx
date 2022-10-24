@@ -4,7 +4,7 @@ import styles from './Item.module.css';
 const Item = (props) => {
     return (
         <div className={styles.item}>
-            <img src={"./img/" + props.item.img} alt="furniture"/>
+            <img src={"./img/" + props.item.img} alt="furniture" onClick={() => props.onShowItem(props.item)}/>
             <h2>{props.item.title}</h2>
             <p>{props.item.desc}</p>
             <p>{props.item.price}$</p>
